@@ -1,0 +1,134 @@
+.direct_calling_dialog {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  border-radius: 40px;
+  top: calc(50% - 150px);
+  left: calc(50% - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: 3s fullRotation ease infinite;
+  color: white;
+  z-index: 6;
+}
+
+@keyframes fullRotation {
+  0% {
+    transform: rotate(-3deg) scale(1) translate3d(0,0,0);
+  }
+  20% {
+    transform: rotate(20deg)  translate3d(0,5px,0);
+  }
+  40% {
+    transform: rotate(-15deg) scale(1.1) translate3d(0,8px,-5px);
+  }
+  60% {
+    transform: rotate(5deg) translate3d(5px,-8px,-80px);
+  }
+  90% {
+    transform: rotate(-1deg) translate3d(0,0,0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes wut {
+  0% {
+    border-radius: 50%;
+    transform: skew(0) translate3d(0, 0px, 0px);
+  }
+  10% {
+    transform: translate3d(0, -10px, 0);
+  }
+  50% {
+    border-radius: 50%;
+  }
+  80% {
+    border-radius: 30%;
+    transform: translate3d(20, 10px, 20px);
+  }
+  100% {
+    border-radius: 50%;
+    transform: skew(0) translate3d(0, 0px, 0px);
+  }
+}
+
+@keyframes wutBefore {
+  0% {
+    border-radius: 50%;
+    transform: translate3d(0, 0px, 0px);
+  }
+  10% {
+    transform: translate3d(-10px, 10px, 0);
+  }
+  70% {
+     border-radius: 50%;
+  }
+  80% {
+    border-radius: 30%;
+    transform: translate3d(-20px, -10px, -20px);
+  }
+  100% {
+    border-radius: 50%;
+    transform: translate3d(0, 0px, 0px);
+  }
+}
+
+.direct_call_dialog_caller_name {
+  font-size: 20px;
+}
+
+.direct_call_dialog_button_container {
+  margin-top: 20px;
+}
+
+
+.call-animation {
+  background: #fff;
+  width: 135px;
+  height: 135px;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 100%;
+  border: solid 5px #fff;
+  animation: play 2s ease infinite;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+
+.hoverred:hover {
+background-color: red;
+cursor: pointer;
+}
+
+.img-circle img {
+      width: 135px;
+      height: 135px;
+      border-radius: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+  }
+@keyframes play {
+
+  0% {
+      transform: scale(1);
+  }
+  15% {
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+  25% {
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4), 0 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  25% {
+      box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.4), 0 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+
+}
+

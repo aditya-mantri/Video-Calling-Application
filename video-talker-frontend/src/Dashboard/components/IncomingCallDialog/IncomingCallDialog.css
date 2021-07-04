@@ -1,0 +1,102 @@
+.direct_call_dialog {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  border-radius: 30px;
+  top: calc(50% - 150px);
+  left: calc(50% - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: shockwaveJump 2.3s ease-out infinite;
+  z-index: 6;
+}
+
+@keyframes shockwaveJump {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.08);
+  }
+  50% {
+     transform: scale(0.98);
+  }
+  55% {
+    transform: scale(1.02);
+  }
+  60% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shockwave {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 2px rgba(0,0,0,0.15), inset 0 0 1px rgba(0,0,0,0.15);
+  }
+  95% {
+    box-shadow: 0 0 50px rgba(0,0,0,0), inset 0 0 30px rgba(0,0,0,0);
+  }
+  100% {
+    transform: scale(2.25);
+
+  }
+}
+
+
+
+
+.direct_call_dialog_caller_name {
+  font-size: 20px;
+  color: white;
+}
+
+.direct_call_dialog_button_container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.direct_call_dialog_accept_button {
+  border-radius: 50px;
+  outline: none;
+  border: 1px solid #e6e5e8;
+  font-size: 16px;
+  padding: 10px 10px;
+  width: 120px;
+  transition: 0.3s;
+  color: #e6e5e8;
+  background-color: #282C34;
+}
+
+.direct_call_dialog_accept_button:hover {
+  background-color: green;
+  opacity: 0.5;
+  color: rgb(255, 255, 255);
+}
+
+.direct_call_dialog_reject_button {
+  border-radius: 50px;
+  outline: none;
+  border: 1px solid #e6e5e8;
+  font-size: 16px;
+  padding: 10px 10px;
+  width: 120px;
+  transition: 0.3s;
+  color: #e6e5e8;
+  background-color: #282C34;
+}
+
+.direct_call_dialog_reject_button:hover {
+  background-color: red;
+  opacity: 0.5;
+  color: rgb(255, 255, 255);
+}
+
+

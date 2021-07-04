@@ -1,0 +1,652 @@
+
+
+
+/*NAVBAR*/
+:root {
+  --primary-color: #5B25F5;
+  --secondary-color: #9792c7;
+  --secondary-color-with-opacity: #bab4e21f;
+  --background-color: #F5F5FD;
+  --background-color-hover: #e5e5ec;
+  --text: #9792c7;
+  --white: #fff;
+  --black: #000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white);
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.navbar {
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  padding: 1.563em;
+  font-weight: 600;
+  width: 18.75em;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  padding: 2.188em 0em 2em 1em;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.navbar-brand .icon-container {
+  width: 2em;
+  height: 2em;
+  border-radius: 0.8em;
+  margin-bottom: .5em;
+  padding: 0.5em;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar-brand .icon {
+  width: 2em;
+  height: 2em;
+  background-color: #fff;
+}
+
+.navbar-brand .icon.hexagon {
+  -webkit-mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/hexagon.svg) no-repeat center;
+  mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/hexagon.svg) no-repeat center;
+}
+
+.navbar-brand .name {
+  padding-top: 0.5em;
+}
+
+
+
+ul.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-x:scroll;
+  overflow-y:scroll;
+  max-height: 250px;
+}
+
+.navbar-nav a {
+  display: flex;
+  color: var(--secondary-color);
+  padding: 1em;
+  text-decoration: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar-nav a.active {
+  color: var(--primary-color)
+}
+
+.navbar-nav a:not(.active):hover {
+  background-color: var(--background-color-hover);
+}
+
+.navbar-nav .active .icon {
+  background-color: var(--primary-color);
+  width: 2em;
+  height: 2em;
+}
+
+.icon {
+  background-color: var(--secondary-color);
+  width: 2em;
+  height: 2em;
+}
+
+.navbar-nav img {
+  margin-right: .5em;
+}
+
+
+/* Bottombar icons */
+
+.navbar-nav .icon.home {
+  -webkit-mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/home.svg) no-repeat center;
+  mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/home.svg) no-repeat center;
+}
+
+.navbar-nav .icon.statistics {
+  -webkit-mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/bar-chart-2.svg) no-repeat center;
+  mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/bar-chart-2.svg) no-repeat center;
+}
+
+.navbar-nav .icon.mail {
+  -webkit-mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/mail.svg) no-repeat center;
+  mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/mail.svg) no-repeat center;
+}
+
+.navbar-nav .icon.user {
+  -webkit-mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/user.svg) no-repeat center;
+  mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/user.svg) no-repeat center;
+}
+
+.navbar-nav .icon.file {
+  -webkit-mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/file.svg) no-repeat center;
+  mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/file.svg) no-repeat center;
+}
+
+.navbar-footer .image-documents {
+  margin-bottom: -8em;
+  position: relative;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+
+
+
+.navbar-footer .container {
+  background-color: var(--background-color);
+  margin: .5em;
+  padding: 1.688em;
+  padding-top: 6em;
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+  border-radius: 1.3em;
+  position: relative;
+  bottom: 0;
+  box-sizing: border-box;
+}
+
+.navbar-footer h2 {
+  margin-bottom: 0.25em;
+  color: var(--black);
+}
+
+.navbar-footer span {
+  color: var(--text);
+  font-size: .8em;
+}
+
+
+@media screen and (min-width: 992px) {
+  body,html{
+    overflow: hidden;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  /* Tablet (768px) */
+
+      *{
+       overflow-x: hidden;
+      }
+
+
+  .group_call_button {
+    position: inherit;
+  }
+  .content__footer {
+    margin-bottom: 40px;
+  }
+  
+  .navbar {
+      bottom: 0;
+      width: 100%;
+      align-items: center;
+      height: auto;
+      padding: 0.1em;
+      position: fixed;
+      margin: 0;
+      border-top: 1px solid var(--background-color);
+      overflow-x: scroll;
+      overflow-y: scroll;
+  }
+  .navbar-brand {
+      display: none;
+  }
+  .navbar-nav {
+      display: flex;
+      width: 100%;
+      height: auto;
+      justify-content: space-around;
+  }
+  .navbar-nav a {
+      float: left;
+      font-size: 0.8em;
+      padding: 1em 0.5em;
+  }
+  .navbar-nav .icon {
+      width: 2em;
+      height: 2em;
+  }
+  .navbar-nav img {
+      margin-right: .5em;
+  }
+  .navbar-footer {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  
+
+  /* Phone (Large)*/
+  .content__footer {
+    margin-bottom: 40px;
+  }
+  
+  .navbar-nav {
+      position: relative;
+      bottom: 0;
+      display: flex;
+      justify-content: space-around;
+      overflow-x: scroll;
+      overflow-y: scroll;
+  }
+  .navbar-nav a {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* Phone (Small) */
+  .navbar-nav span {
+      display: none;
+  }
+}
+/*HEADER*/
+main {
+  margin-top: 0.6em;
+  margin-right: 1em;
+  border-radius: 2.5em;
+  margin-left: 18.75em;
+  width: 59rem;
+  background-color: var(--background-color);
+  padding: 2em;
+}
+
+.dialogcolor {
+  background-color: #a4a4d8;
+}
+
+main header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main header .icon.search {
+  -webkit-mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/search.svg) no-repeat center;
+  mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/search.svg) no-repeat center;
+}
+
+main header .form-inline {
+  display: flex;
+  width: 100%;
+}
+
+main header input[type="search"] {
+  border: none;
+  background: none;
+  margin-left: 0.5em;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+main header button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 2px solid;
+  border-color: var(--secondary-color-with-opacity);
+  outline: none;
+  border-radius: 0.8em;
+  padding: .8em 1.2em;
+  color: var(--text);
+  font-weight: 600;
+}
+
+main header button.change-view {
+  margin-right: 1.2em;
+}
+
+main header button.notification {
+  border: none;
+}
+
+main header button.menu {
+  border: none;
+}
+
+main header .change-view .icon {
+  margin-right: 0.5em;
+}
+
+main header .icon.search {
+  -webkit-mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/search.svg) no-repeat center;
+  mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/search.svg) no-repeat center;
+}
+
+main header section[role="application"] {
+  display: flex;
+}
+
+main header .icon.layout {
+  -webkit-mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/layout.svg) no-repeat center;
+  mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/layout.svg) no-repeat center;
+}
+
+main header .icon.notification {
+  -webkit-mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/bell.svg) no-repeat center;
+  mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/bell.svg) no-repeat center;
+}
+
+main header .icon.menu {
+  -webkit-mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/menu.svg) no-repeat center;
+  mask: url(https://ozcanzaferayan.github.io/financial-crm/icon/menu.svg) no-repeat center;
+}
+
+main h1 {
+  color: var(--black);
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  /* Tablet (768px) */
+  main {
+      margin-left: 0;
+      border-radius: 0;
+      margin: 0;
+      width: 100%;
+      height:100%;
+  }
+  .content__footer {
+    margin-bottom: 40px;
+  }
+  
+  main header {
+      margin-bottom: 0em;
+      padding: 1em;
+  }
+  main header button.change-view {
+      display: none;
+  }
+  main h1 {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* Phone (Large)*/
+  main {
+    width: 100%;
+    height:100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* Phone (Small) */
+  main header button {
+      padding: 0em 1.2em;
+  }
+  main header {
+      padding: 0.5em 0.7em;
+  }
+}
+/*CHARTS*/.charts-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main section[role="credit-card"] {
+  width: 300px;
+  height: 210px;
+  background-color: #D48888;
+  border-radius: 2em;
+  position: relative;
+  margin-left: -3.34em;
+  margin-bottom: 1em;
+  padding: 20px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 10px 10px 46px -6px rgba(104, 87, 150, 1);
+  -moz-box-shadow: 10px 10px 46px -6px rgba(104, 87, 150, 1);
+  box-shadow: 10px 10px 46px -6px rgba(104, 87, 150, 1);
+}
+
+main section[role="credit-card"] img {
+  width: 4em;
+  height: 100%;
+}
+
+main section[role="credit-card"] img.apple_pay {
+  width: 3em;
+}
+
+main section[role="credit-card"] .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+main section[role="credit-card"] .ccNumber {
+  margin-top: 1.3em;
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+  font-family: monospace;
+  font-size: 1.2rem;
+}
+
+.ccBottom {
+  margin-top: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.ccValidThru,
+.ccCardHolder {
+  display: flex;
+  flex-direction: column;
+}
+
+.ccCardHolder {
+  margin-right: 1em;
+}
+
+.ccBottom label {
+  opacity: .5;
+  font-size: .7em;
+}
+
+main section[role="chart"] {
+  width: 100%;
+  margin-left: 1em;
+  height: 29em;
+  background-color: var(--white);
+  border-radius: 2em;
+  margin-bottom: 1em;
+  padding: 2em;
+  padding-bottom: 5em;
+  box-sizing: border-box;
+}
+
+section[role="chart"] .title {
+  color: var(--black);
+  font-weight: 700;
+  margin-top: 0;
+}
+
+main section[role="chart"].exchange-rates {
+  width: calc(100% - 270px);
+}
+
+main section[role="chart"].last-costs {
+  width: calc(100% - 350px);
+}
+
+main section[role="chart"].efficiency {
+  width: 250px;
+  height: 0px;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Laptop (1024px) */
+  main section[role="chart"].efficiency {
+      width: 170px;
+  }
+  main section[role="chart"].last-costs {
+      width: calc(100% - 210px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Tablet (768px) */
+  main section[role="credit-card"] {
+      margin-left: 0;
+  }
+  .charts-wrapper {
+      flex-direction: column;
+  }
+  main section[role="chart"].exchange-rates,
+  main section[role="chart"].last-costs,
+  main section[role="chart"].efficiency {
+      margin-left: 0;
+      width: 100%;
+      padding: 2em;
+      border-radius: 0;
+      padding-bottom: 5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main section[role="chart"].exchange-rates,
+  main section[role="chart"].last-costs,
+  main section[role="chart"].efficiency {
+      padding: 0.5em;
+      padding-bottom: 3em;
+  }
+  main section[role="chart"].efficiency {
+      margin-bottom: 5em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* Phone (Small) */
+  main section[role="credit-card"] {
+      width: 100%;
+      padding: 0.75em;
+      margin-bottom: 0.75em;
+      border-radius: 0;
+      height: initial;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+  }
+  main section[role="credit-card"] img {
+      width: 2em;
+  }
+  main section[role="credit-card"] img.apple_pay {
+      width: 2em;
+  }
+  main section[role="credit-card"] .ccNumber {
+      margin-top: 0.7em;
+  }
+  .ccBottom {
+      margin-top: 0.7em;
+  }
+  section[role="chart"] .title {
+      margin-bottom: 0.2em;
+  }
+  main section[role="chart"].exchange-rates,
+  main section[role="chart"].last-costs,
+  main section[role="chart"].efficiency {
+      height: 12em;
+  }
+}
+
+/*--------------------------------*/
+
+
+
+.modal {
+  background:rgba(0,0,0,0.7);
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  bottom:0px;
+  transition:all .5s ease-in-out;
+  opacity:0;
+  z-index:-1;
+}
+.modal:target {
+  opacity:1;
+  transition:all .5s ease-in-out;
+  z-index:+1;
+}
+.modal-content {
+  position:fixed;
+  top:50%;
+  left:50%;
+  width:500px;
+  background:#fff;
+  border-radius:4px;
+  transform:translate(-50%, -200%);
+  transition:all .5s ease-in-out;
+  perspective: 1000;
+  outline:1px solid transparent;
+  opacity:0;
+}
+.modal:target .modal-content {
+  transform:translate(-50%, -50%);
+  transition:all .5s ease-in-out;
+  transition-delay:.5s;
+  z-index:9999;
+  opacity:1;
+}
+.modal-close {
+  float:right;
+  text-decoration:none;
+  padding:22px 22px;
+  color:#424242;
+  font-weight:800;
+  transition:all .5s ease-in-out;
+  z-index:+1;
+  background:rgba(0,0,0,0.1);
+  text-align:center;
+  border-radius:0 4px 0 0;
+}
+.modal-close:hover {
+  color:#fff;
+  background:rgba(0,0,0,0.5);
+}
+.modal-content h3 {
+  padding:20px;
+  display:block;
+  text-align:center;
+  border-bottom:1px solid #e0e0e0;
+  text-transform:uppercase;
+  background:rgba(2,162,239,1);
+  color:#fff;
+  border-radius:4px 4px 0 0;
+}
+.modal-area {
+  padding:20px;
+}
